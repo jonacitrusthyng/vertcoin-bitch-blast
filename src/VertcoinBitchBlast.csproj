@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <AssemblyName>VertcoinBitchBlast</AssemblyName><Product>Vertcoin Bitch Blast! Edition</Product><Title>Vertcoin Bitch Blast! Edition</Title>
+    <Version>0.4.0</Version><ApplicationManifest>app.manifest</ApplicationManifest><ApplicationIcon>Assets/emi.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><Resource Include="Assets/emi-patch.png" /><Resource Include="Assets/emi-host.png" /><Resource Include="Assets/walnut-trailer.jpg" /><Content Include="Media/**/*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" /><Content Include="Assets/emi-host.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" /></ItemGroup>
+</Project>

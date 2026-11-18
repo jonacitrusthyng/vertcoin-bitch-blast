@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+build*/
+test-build*/
+*.dat
+*.generating
+settings.json
+*.zip
+
+# Distributed in the pinned release music pack / full Source ZIP
+src/Media/Music/
+src/Media/Covers/
+*.download.zip

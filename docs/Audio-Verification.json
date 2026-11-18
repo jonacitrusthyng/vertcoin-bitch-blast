@@ -1,0 +1,380 @@
+[
+  {
+    "File": "Effects/blast.wav",
+    "Bytes": 57374,
+    "SHA256": "197045478469c3b10df9868b7297305a7f553a3ad46591dc032004a69ca4f89b",
+    "DurationSeconds": 0.65,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Effects/click.wav",
+    "Bytes": 8864,
+    "SHA256": "2d9b74bedc2661c473fc9b4601c8ca2376677a9de4983213198ed7388b48eed4",
+    "DurationSeconds": 0.1,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Effects/coin.wav",
+    "Bytes": 39734,
+    "SHA256": "3193cc058d4e46ce1a070aadeed74a9c044952639ed0dcf9725ab8e173eb90e6",
+    "DurationSeconds": 0.45,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Effects/save.wav",
+    "Bytes": 28268,
+    "SHA256": "beb1539fe3279464f73e792ac871c2a0183d3ec019ad27efaff9b65c21609235",
+    "DurationSeconds": 0.32,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Effects/stop.wav",
+    "Bytes": 19448,
+    "SHA256": "776d2638aa986c32878646dada36cdf740667fe659a0ffc3d8e3185018a72ebd",
+    "DurationSeconds": 0.22,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/01.mp3",
+    "Bytes": 3618322,
+    "SHA256": "073d6159a4227b25c4bdfbc0e2da7791c3fdb04412e17fb321161a45441231b4",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/02.mp3",
+    "Bytes": 3618322,
+    "SHA256": "74a416b6ef72a5914aa95f7a93352e8d186bcc66631b446dc4d4488cdd6c7c6e",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/03.mp3",
+    "Bytes": 3618322,
+    "SHA256": "8b37f4ed414b7edfbc9793efb6f3a87adb99d9a6747b16d71299fbb785d352df",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/04.mp3",
+    "Bytes": 3618322,
+    "SHA256": "8bc6165f22a8b1b3626fc42a96e6fef2db84518dee8218f3df124d2e7e3d40be",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/05.mp3",
+    "Bytes": 3618322,
+    "SHA256": "eced133d22bb784af774e7f678c688fc317fdbb7dcbcef483ab6edae2b47b81b",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/06.mp3",
+    "Bytes": 3618322,
+    "SHA256": "94acdba19585281f4a7440fa006ceed2b786aea7bdfbd930a393da6edd5d1558",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/07.mp3",
+    "Bytes": 3618322,
+    "SHA256": "e7862e271277acab3b62b8639d7257f01a533a7fecf9effb64ea96b1a3a7363e",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/08.mp3",
+    "Bytes": 3618322,
+    "SHA256": "658d44d881fb7a12cccb3e1e718ccecaf61aed283aa0a15f3d6a8e29fe0b3f5e",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/09.mp3",
+    "Bytes": 3618322,
+    "SHA256": "ddc62d5f7ce076bdc7df3e8345e2a63a771d7f138f40bc20be473fabdae04346",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/10.mp3",
+    "Bytes": 3618322,
+    "SHA256": "7304103a907be8e9a15ccba8b4a3feebb1a8ade7c5d74469d47f05b2df2e8a9f",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/11.mp3",
+    "Bytes": 3618322,
+    "SHA256": "a2e368a8ed7afc84646e459991e7d390dfbe42446fe84a5cd7228918469c9556",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/12.mp3",
+    "Bytes": 3618322,
+    "SHA256": "801ebe3806022410214638005462a754d9559d40cf57be9f0f386ad41c547a71",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/13.mp3",
+    "Bytes": 3618322,
+    "SHA256": "092daceddc7aa0d6351f3255a4d603eae8db492b130a460bffe3cbf83b7bfd30",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/14.mp3",
+    "Bytes": 3618322,
+    "SHA256": "0179c4adfbb70ea1af33fffb438a68927376c13dbdd6ff9e1851e6a612cf26c5",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/15.mp3",
+    "Bytes": 3618322,
+    "SHA256": "f3cb963046e531f7654803bf72288ff872d69a0097bbc7087632a2a6aad8c34a",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/16.mp3",
+    "Bytes": 3618322,
+    "SHA256": "c70a13eb49566aaa5fcecdd264ca636d22e3a8bd19f6a52e7b7bfdce94a1d1ac",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/17.mp3",
+    "Bytes": 3618322,
+    "SHA256": "5c0bea1be9ac567225bc6e57f6d45ee7e80eee430b708fda919b1b46c61abd6b",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/18.mp3",
+    "Bytes": 3618322,
+    "SHA256": "e0231f8db7b9351e0cd1fb61d24825a98cd4f7cc7b6eed0590b17eca3ed3b5e6",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/19.mp3",
+    "Bytes": 3618322,
+    "SHA256": "49f00a26dc697005a6bf81dc2853476627f89186b070010f028456d9a0c2f8ac",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/20.mp3",
+    "Bytes": 3618322,
+    "SHA256": "257c4cd2a4724b61716f5b203be717e37883396922f698daf0c91f616471803e",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/21.mp3",
+    "Bytes": 3618322,
+    "SHA256": "365feff37898e894b1d967860134c461a08854db50a98cd5339e0dd63500e084",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Music/22-no-permission-slip.mp3",
+    "Bytes": 3618322,
+    "SHA256": "cad01a2ea9647f3450dd4028bdfbe8c236433525c9644615fe5fe3dd011e4164",
+    "DurationSeconds": 150.048,
+    "SampleRate": 48000,
+    "Channels": 2,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/ai_pause.wav",
+    "Bytes": 511784,
+    "SHA256": "084d2f9a69a2cbe36a223fa91c8986a92bb7157d69ba271e465e807fc08c31ef",
+    "DurationSeconds": 5.8020408,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/auto_off.wav",
+    "Bytes": 372520,
+    "SHA256": "3324e1fe430d14c4d4a0c2bf4b5e816594e84f745a04fa49ecf217f1ad786d05",
+    "DurationSeconds": 4.2230839,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/auto_on.wav",
+    "Bytes": 376616,
+    "SHA256": "31f3e592111492e351e0046d3a60ba50037bcc2593c4f0c721a54c03a754fde2",
+    "DurationSeconds": 4.2695238,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/jukebox.wav",
+    "Bytes": 293672,
+    "SHA256": "d4c00ece40b3fb7975f12b28853984dfac9627d2119f19afdb1988e6dc826fdb",
+    "DurationSeconds": 3.3291156,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/mining.wav",
+    "Bytes": 455464,
+    "SHA256": "e5f4e7eba74be54e98799484f32cfec07e0e8841b916c4181eb0b8417774fe9b",
+    "DurationSeconds": 5.163492,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/pool.wav",
+    "Bytes": 346920,
+    "SHA256": "673724f73c72b8a59f02b55c1d31672bf79afb3e7a30ac227cd3be3212ebb658",
+    "DurationSeconds": 3.9328344,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/receipts.wav",
+    "Bytes": 417576,
+    "SHA256": "d08cf0f18929034c9c8a4bb69b60a01f50b9dccb8b5346ce023e03ba36942e6d",
+    "DurationSeconds": 4.7339229,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/saved.wav",
+    "Bytes": 304936,
+    "SHA256": "7db989bf3d1adf1e94fb40439ad2ec6927c8fdafdcf1bdbde3c4482af04d524c",
+    "DurationSeconds": 3.4568253,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/settings_saved.wav",
+    "Bytes": 342824,
+    "SHA256": "f88271b8afbe7ca8a00c5f3bf3dfe30e3575b7b16a56810f563076ca054f7f22",
+    "DurationSeconds": 3.8863945,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/settings.wav",
+    "Bytes": 290600,
+    "SHA256": "cf9cfdc79f969a70c1d41b4f8ace0bbb9381902ed7bfef828497d136a268ed0e",
+    "DurationSeconds": 3.2942857,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/share.wav",
+    "Bytes": 301864,
+    "SHA256": "4ba78b993e6e4ede7a0121863abf17bade801f4d19c70255eba349ed404b44be",
+    "DurationSeconds": 3.4219954,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/start.wav",
+    "Bytes": 365352,
+    "SHA256": "b0149ed3582ad5b71c0d15c42a5dd8256f30131b157ffc4f7aaec59a7f9fe86e",
+    "DurationSeconds": 4.141814,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/stop.wav",
+    "Bytes": 338728,
+    "SHA256": "9e9f8da509a6d69d583ef9892c838204330051303b8028a849b7084911bc3903",
+    "DurationSeconds": 3.8399546,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/wallet.wav",
+    "Bytes": 455464,
+    "SHA256": "5a89718534edacf6e17a79d6a647feea8acbd26c27202238159c48cdc016e68b",
+    "DurationSeconds": 5.163492,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  },
+  {
+    "File": "Voice/welcome.wav",
+    "Bytes": 346920,
+    "SHA256": "f796359d39fb85e56ebc6196954f9738513089517db68b21a8fedcd1398952df",
+    "DurationSeconds": 3.9328344,
+    "SampleRate": 44100,
+    "Channels": 1,
+    "DecodePassed": true
+  }
+]

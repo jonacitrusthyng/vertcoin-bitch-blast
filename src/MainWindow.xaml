@@ -1,0 +1,126 @@
+<Window x:Class="VertcoinOcm.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+ Title="Vertcoin Bitch Blast! Edition" Icon="{StaticResource MinerIcon}" Width="1340" Height="920" MinWidth="1060" MinHeight="740" WindowStartupLocation="CenterScreen" Background="#170E1C" FontFamily="Segoe UI" FontSize="15" Foreground="#EFF8F3" WindowStyle="None" ResizeMode="CanResize" Closing="OnClosing">
+ <shell:WindowChrome.WindowChrome><shell:WindowChrome CaptionHeight="46" ResizeBorderThickness="6" CornerRadius="0" GlassFrameThickness="0"/></shell:WindowChrome.WindowChrome>
+ <Border BorderBrush="#63405F" BorderThickness="1"><Grid>
+  <Grid.RowDefinitions><RowDefinition Height="46"/><RowDefinition Height="*"/><RowDefinition Height="98"/></Grid.RowDefinitions>
+  <Border BorderBrush="#63405F" BorderThickness="0,0,0,1" Background="#26162C"><Grid Margin="18,0,6,0"><TextBlock VerticalAlignment="Center" FontSize="16"><Run Foreground="#62DFA1" Text="●  "/><Run Text="Vertcoin Bitch Blast! Edition"/></TextBlock><StackPanel Orientation="Horizontal" HorizontalAlignment="Right" shell:WindowChrome.IsHitTestVisibleInChrome="True"><Button Content="─" Padding="16,4" Background="Transparent" BorderThickness="0" Click="MinimizeClick" AutomationProperties.Name="Minimize"/><Button Content="□" Padding="16,4" Background="Transparent" BorderThickness="0" Click="MaximizeClick" AutomationProperties.Name="Maximize"/><Button Content="✕" Padding="16,4" Background="Transparent" BorderThickness="0" Click="CloseClick" AutomationProperties.Name="Close"/></StackPanel></Grid></Border>
+  <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="210"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+   <Border BorderBrush="#583552" BorderThickness="0,0,1,0" Background="#201225"><Grid Margin="16,20,16,20">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <StackPanel><Image Source="{StaticResource MinerIcon}" Height="106" Width="106" Margin="0,10,0,8"/>
+     <TextBlock Text="Vertcoin" FontFamily="Segoe UI" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,6,0,0"/><TextBlock Text="BITCH BLAST! EDITION" FontSize="11" Foreground="#A9C5B6" HorizontalAlignment="Center" Margin="0,7,0,0"/>
+     <Border Background="#3B203C" BorderBrush="#825278" BorderThickness="1" CornerRadius="6" Padding="7,5" Margin="2,16,2,24"><TextBlock Text="EMI INSIDE. WALNUT OUTSIDE." FontSize="10" FontWeight="SemiBold" Foreground="#78E4AC" HorizontalAlignment="Center"/></Border>
+     <Button x:Name="DashboardNav" Content="◈   Blast deck" HorizontalContentAlignment="Left" Click="DashboardClick" Background="#653153" Margin="0,0,0,8"/>
+     <Button Content="▣   Nut fund" Click="WalletClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
+     <Button Content="⚙   Settings" Click="SettingsClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
+     <Button Content="♫   Emi’s jukebox" Click="JukeboxClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
+     <Button Content="≋   The receipts" Click="ActivityClick" Background="Transparent" BorderThickness="0"/>
+    </StackPanel>
+    <StackPanel Grid.Row="2"><Border Height="1" Background="#2C5141" Margin="0,0,0,16"/><Button Content="?   Getting started" Click="HelpClick" Background="Transparent" BorderThickness="0"/><TextBlock Text="v0.4.0 · COMMUNITY PREVIEW" FontSize="9" Foreground="#91B29F" HorizontalAlignment="Center" Margin="0,14,0,0"/></StackPanel>
+   </Grid></Border>
+   <ScrollViewer x:Name="MainScroll" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel Margin="28,22,28,20">
+    <Border x:Name="HeroPanel" CornerRadius="18" BorderThickness="1" BorderBrush="#6D426B" Height="206" Margin="0,0,0,18" ClipToBounds="True">
+     <Grid><Image Source="Assets/walnut-trailer.jpg" Stretch="UniformToFill" IsHitTestVisible="False" AutomationProperties.Name="A ribbon-wearing walnut launches above a trailer, with a dog, goose and amused driver"/>
+      <Border><Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,0"><GradientStop Color="#F21A1021"/><GradientStop Color="#D91A1021" Offset=".43"/><GradientStop Color="#001A1021" Offset=".85"/></LinearGradientBrush></Border.Background></Border>
+      <StackPanel Margin="25,23" VerticalAlignment="Center" MaxWidth="470" HorizontalAlignment="Left">
+       <TextBlock Text="VERTCOIN · INDEPENDENT COMMUNITY MINER" FontSize="11" FontWeight="Bold" Foreground="#A8F3BE"/>
+       <TextBlock Text="Big walnut energy." FontSize="35" FontWeight="Bold" Margin="0,8,0,0"/>
+       <TextBlock Text="Your GPU. Emi’s playlist. Absolutely no chill." FontSize="15" Foreground="#F3DCEB" TextWrapping="Wrap" Margin="0,8,0,15"/>
+       <Border CornerRadius="16" BorderBrush="#90E9AB" BorderThickness="1" Background="#EE172A21" HorizontalAlignment="Left" Padding="12,6"><TextBlock x:Name="StatusBadge" Text="●  Walnut armed. Miner idle." Foreground="#ACF0BD" FontSize="12"/></Border>
+      </StackPanel>
+     </Grid>
+    </Border>
+    <Grid x:Name="Dashboard">
+     <Grid.ColumnDefinitions><ColumnDefinition Width="1.3*"/><ColumnDefinition Width="18"/><ColumnDefinition Width="1*"/></Grid.ColumnDefinitions>
+     <StackPanel>
+      <Border Style="{StaticResource Card}" MinHeight="264"><StackPanel>
+       <TextBlock Text="▣  The nut fund · payout wallet" Style="{StaticResource Heading}" Foreground="#8AE6B6"/>
+       <TextBlock x:Name="WalletHeading" Text="Your coins. Your damn wallet." TextWrapping="Wrap" FontFamily="Segoe UI" FontSize="25" FontWeight="Bold" Margin="0,23,0,8"/>
+       <TextBlock x:Name="WalletSummary" Text="Add your receiving address to get started." Foreground="#B4CABB" TextWrapping="Wrap" Margin="0,0,0,7"/>
+       <TextBlock Text="Mining rewards go directly from the pool to you." FontSize="12" Foreground="#99B7A6" TextWrapping="Wrap"/>
+       <Grid Margin="0,23,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="12"/><ColumnDefinition/></Grid.ColumnDefinitions><Button x:Name="WalletButton" Content="＋  Set payout wallet" Style="{StaticResource Primary}" Click="WalletClick"/><Button Grid.Column="2" Content="⧉  Copy address" Click="CopyAddressClick"/></Grid>
+      </StackPanel></Border>
+      <Grid Margin="0,16,0,16"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/></Grid.ColumnDefinitions>
+       <Border Style="{StaticResource Card}" Padding="19" MinHeight="139"><StackPanel><TextBlock Text="↗  Worker shares" Foreground="#BBD7C8"/><TextBlock x:Name="SharesText" Text="0 accepted" FontSize="27" FontWeight="SemiBold" Margin="0,13,0,7"/><TextBlock x:Name="RejectedText" Text="No shares submitted yet" FontSize="12" Foreground="#A6C5B3"/></StackPanel></Border>
+       <Border Grid.Column="2" Style="{StaticResource Card}" Padding="19"><StackPanel><TextBlock Text="◴  Hashrate" Foreground="#8DDDD2"/><TextBlock x:Name="HashrateText" Text="— kH/s" FontSize="27" FontWeight="SemiBold" Margin="0,13,0,7"/><TextBlock Text="Live from VerthashMiner" FontSize="12" Foreground="#A6C5B3"/></StackPanel></Border>
+      </Grid>
+      <Border Style="{StaticResource Card}" Padding="20"><Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="AI gets first dibs." FontFamily="Segoe UI" FontSize="22" FontWeight="Bold"/><TextBlock x:Name="AiSummary" Text="Pause for local AI. Resume when it’s idle." Foreground="#ADC9B9" FontSize="13" Margin="0,7,15,0" TextWrapping="Wrap"/></StackPanel><CheckBox x:Name="AutoToggle" Style="{StaticResource AiSwitch}" Grid.Column="1" IsChecked="True" VerticalAlignment="Center" Content="Auto" Checked="AutoChanged" Unchecked="AutoChanged" AutomationProperties.Name="Automatic AI GPU sharing" ToolTip="Pause for LM Studio/Bionic inference and your reserved processes. Resume after the idle delay." FontWeight="Bold" Foreground="#86E6B1"/></Grid></Border>
+     </StackPanel>
+     <Border Grid.Column="2" Style="{StaticResource Card}"><StackPanel>
+      <TextBlock Text="◈  Launch controls" Style="{StaticResource Heading}"/>
+      <Border Height="1" Background="#3C6A50" Margin="0,22,0,8"/>
+      <TextBlock Text="MINING POOL" Style="{StaticResource Label}"/>
+      <ComboBox x:Name="PoolSelect" SelectionChanged="PoolChanged" AutomationProperties.Name="Mining pool"/>
+      <TextBlock x:Name="PoolEndpoint" Foreground="#A6C5B3" FontSize="11" TextWrapping="Wrap" Margin="0,10,0,0"/>
+      <Grid Margin="0,18,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="Pool fee" Foreground="#A7BEB3"/><TextBlock x:Name="PoolFee" Text="0.9%" FontSize="22" TextWrapping="Wrap" Margin="0,4,10,0" FontWeight="Bold"/></StackPanel><Button Grid.Column="1" Content="Check pool" Click="CheckPoolClick" VerticalAlignment="Center" Padding="10"/></Grid>
+      <TextBlock x:Name="PoolStatus" Text="Choose a pool, then check its connection." TextWrapping="Wrap" FontSize="12" Foreground="#ABC8B8" Margin="0,13,0,0"/>
+      <Button Content="View payouts ↗" Click="PoolDashboardClick" Margin="0,17,0,0"/>
+      <Border Height="1" Background="#3C6A50" Margin="0,22,0,19"/>
+      <Button x:Name="StartButton" Content="▶  Blast off · start mining" Style="{StaticResource Primary}" FontSize="19" Padding="16,16" Click="StartClick"/>
+      <TextBlock x:Name="MiningDetail" Text="First, set a VTC address and prepare your miner in Settings." Foreground="#ADC6B7" TextWrapping="Wrap" FontSize="13" Margin="0,14,0,0"/>
+     </StackPanel></Border>
+    </Grid>
+    <Border x:Name="JukeboxPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
+     <TextBlock Text="Emi’s walnut-powered jukebox." Style="{StaticResource Heading}" TextWrapping="Wrap"/>
+     <TextBlock x:Name="AlbumStatus" Foreground="#D7BED5" Margin="0,8,0,16"/>
+     <Grid><Grid.ColumnDefinitions><ColumnDefinition Width=".85*"/><ColumnDefinition Width="22"/><ColumnDefinition Width="1.25*"/></Grid.ColumnDefinitions>
+      <StackPanel><Border CornerRadius="16" Background="#160F1B" Padding="6"><Image x:Name="CoverImage" Source="Assets/emi-host.png" Height="280" Stretch="Uniform" AutomationProperties.Name="Emi, the adult fictional jukebox host"/></Border>
+       <TextBlock x:Name="SelectedTitle" FontSize="24" FontWeight="Bold" Margin="0,16,0,7" TextWrapping="Wrap"/>
+       <TextBlock x:Name="JukeboxStatus" Foreground="#A6EDBA" TextWrapping="Wrap" FontSize="13"/>
+       <WrapPanel Margin="0,16,0,8"><Button Content="◀◀" Click="PreviousMusicClick" AutomationProperties.Name="Previous song" Padding="12,10"/><Button x:Name="PlayMusicButton" Content="▶  Play" Click="PlayMusicClick" Style="{StaticResource Primary}" Margin="7,0"/><Button Content="▶▶" Click="NextMusicClick" AutomationProperties.Name="Next song" Padding="12,10"/><Button Content="■" Click="StopMusicClick" AutomationProperties.Name="Stop music" Margin="7,0,0,0" Padding="12,10"/></WrapPanel>
+       <Slider x:Name="SeekBar" Minimum="0" Maximum="1" ValueChanged="SeekChanged" PreviewMouseLeftButtonDown="SeekStarted" PreviewMouseLeftButtonUp="SeekFinished" AutomationProperties.Name="Song position"/>
+       <TextBlock x:Name="PlaybackClock" Text="00:00 / 00:00" FontSize="12" Foreground="#D7BED5" Margin="0,7,0,0"/>
+       <WrapPanel><CheckBox x:Name="ShuffleToggle" Content="Shuffle" Checked="AudioChanged" Unchecked="AudioChanged" Margin="0,10,20,10"/><CheckBox x:Name="RepeatToggle" Content="Repeat playlist" Checked="AudioChanged" Unchecked="AudioChanged"/></WrapPanel>
+      </StackPanel>
+      <StackPanel Grid.Column="2"><TextBlock Text="THE PLAYLIST" Foreground="#F6B9DF" FontSize="12" FontWeight="Bold" Margin="0,0,0,8"/>
+       <ListBox x:Name="TrackList" SelectionChanged="TrackSelected" MouseDoubleClick="TrackDoubleClick" Height="365" Background="#180F20" BorderBrush="#694665" Foreground="#FAF1F7" ScrollViewer.HorizontalScrollBarVisibility="Disabled" AutomationProperties.Name="Jukebox songs"><ListBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Title}" TextWrapping="Wrap" Margin="9,7"/></DataTemplate></ListBox.ItemTemplate></ListBox>
+       <TextBlock x:Name="TrackCredit" Foreground="#CFB5CE" FontSize="12" TextWrapping="Wrap" Margin="0,12,0,0"/>
+      </StackPanel>
+     </Grid>
+     <Border Height="1" Background="#63435F" Margin="0,22,0,14"/>
+     <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="22"/><ColumnDefinition/><ColumnDefinition Width="22"/><ColumnDefinition/></Grid.ColumnDefinitions>
+      <StackPanel><TextBlock Text="Music volume"/><Slider x:Name="MusicVolume" Minimum="0" Maximum="100" ValueChanged="AudioVolumeChanged" LostMouseCapture="VolumeFinished" LostKeyboardFocus="VolumeFinished" Margin="0,10" AutomationProperties.Name="Music volume"/></StackPanel>
+      <StackPanel Grid.Column="2"><TextBlock Text="Sound-effects volume"/><Slider x:Name="EffectsVolume" Minimum="0" Maximum="100" ValueChanged="AudioVolumeChanged" LostMouseCapture="VolumeFinished" LostKeyboardFocus="VolumeFinished" Margin="0,10" AutomationProperties.Name="Effects volume"/><Button Content="Test walnut blast" Click="TestEffectsClick"/></StackPanel>
+      <StackPanel Grid.Column="4"><TextBlock Text="Emi commentary volume"/><Slider x:Name="VoiceVolume" Minimum="0" Maximum="100" ValueChanged="AudioVolumeChanged" LostMouseCapture="VolumeFinished" LostKeyboardFocus="VolumeFinished" Margin="0,10" AutomationProperties.Name="Commentary volume"/><Button Content="Say something, Emi" Click="TestVoiceClick"/></StackPanel>
+     </Grid>
+     <Expander Header="Lyrics and credits" Foreground="#F7EAF3" Margin="0,20,0,0"><TextBox x:Name="TrackLyrics" IsReadOnly="True" TextWrapping="Wrap" Height="250" VerticalScrollBarVisibility="Auto" Margin="0,12,0,0"/></Expander>
+     <TextBlock Text="Emi is Jona’s adult fictional fan interpretation, inspired by Katawa Shoujo / Four Leaf Studios. Music starts only when you press Play. Commentary captions remain visible when muted." TextWrapping="Wrap" Foreground="#C5ADC5" FontSize="12" Margin="0,18,0,0"/>
+    </StackPanel></Border>
+    <Border x:Name="WalletPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
+     <TextBlock Text="Where the nuts land." Style="{StaticResource Heading}"/><TextBlock Text="Paste a Vertcoin receiving address from your wallet. Pool payouts will go to this address." TextWrapping="Wrap" Foreground="#ADC9B9" Margin="0,12,0,4"/>
+     <TextBlock Text="PUBLIC VTC RECEIVING ADDRESS" Style="{StaticResource Label}"/><TextBox x:Name="AddressInput" AutomationProperties.Name="Vertcoin payout address" MaxLength="90"/>
+     <TextBlock Text="Use a Vertcoin mainnet address, usually starting with V or vtc1. Never enter a recovery phrase or private key." Foreground="#A3C0AF" TextWrapping="Wrap" FontSize="12" Margin="0,10,0,0"/>
+     <WrapPanel Margin="0,22,0,0"><Button Content="Save payout address" Style="{StaticResource Primary}" Click="SaveWalletClick" Margin="0,0,12,12"/><Button Content="I need a wallet ↗" Click="GetWalletClick" Margin="0,0,12,12"/><Button Content="Open my wallet" Click="OpenWalletClick" Margin="0,0,0,12"/></WrapPanel>
+     <Border Height="1" Background="#2C5141" Margin="0,12,0,20"/><TextBlock Text="Your keys stay in your wallet." FontSize="20" FontFamily="Segoe UI"/><TextBlock Text="This app is a mining front end. Your wallet handles balances, receiving and sending coins. Pool earnings and pending payouts are available through View payouts. Changing this address does not move an existing pool balance." TextWrapping="Wrap" Foreground="#ADC9B9" Margin="0,10,0,0"/>
+    </StackPanel></Border>
+    <Border x:Name="SettingsPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
+     <TextBlock Text="Under the hood." Style="{StaticResource Heading}"/><TextBlock Text="Prepare the miner once, choose a GPU, and make room for your AI." Foreground="#ADC9B9" Margin="0,10,0,13"/>
+     <WrapPanel><Button x:Name="PrepareButton" Content="↓  Prepare miner + data" Style="{StaticResource Primary}" Click="PrepareClick" Margin="0,0,12,8"/><Button x:Name="CancelSetupButton" Content="Cancel setup" Click="CancelSetupClick" IsEnabled="False" Margin="0,0,12,8"/><Button Content="Scan GPUs" Click="ScanClick" Margin="0,0,12,8"/><Button Content="Test GPU offline" Click="TestGpuClick" Margin="0,0,0,8"/></WrapPanel>
+     <TextBlock x:Name="SetupStatus" Text="Downloads verified VerthashMiner 0.7.2; creates a 1.28 GB data file locally. Initial setup takes several minutes." TextWrapping="Wrap" Foreground="#B0D5BF" FontSize="13" Margin="0,8,0,6"/>
+     <TextBlock Text="VERTHASHMINER EXECUTABLE" Style="{StaticResource Label}"/><DockPanel><Button Content="Browse…" DockPanel.Dock="Right" Click="BrowseMinerClick" Margin="10,0,0,0"/><TextBox x:Name="MinerInput" AutomationProperties.Name="Miner executable"/></DockPanel>
+     <TextBlock Text="VERTHASH DATA FILE" Style="{StaticResource Label}"/><DockPanel><Button Content="Browse…" DockPanel.Dock="Right" Click="BrowseDataClick" Margin="10,0,0,0"/><TextBox x:Name="DataInput" AutomationProperties.Name="Verthash data file"/></DockPanel>
+     <TextBlock Text="GPU TO MINE WITH" Style="{StaticResource Label}"/><ComboBox x:Name="GpuSelect" AutomationProperties.Name="Mining GPU"/>
+     <Grid Margin="0,6,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="GPU intensity · %" Style="{StaticResource Label}"/><TextBox x:Name="IntensityInput" Text="75"/></StackPanel><StackPanel Grid.Column="2"><TextBlock Text="Temperature limit · °C" Style="{StaticResource Label}"/><TextBox x:Name="TemperatureInput" Text="75"/></StackPanel><StackPanel Grid.Column="4"><TextBlock Text="AI idle delay · seconds" Style="{StaticResource Label}"/><TextBox x:Name="IdleInput" Text="30"/></StackPanel></Grid>
+     <TextBlock Text="LM Studio and Bionic: pause during inference or queued work. Unknown status keeps mining paused. Other apps: reserve the GPU whenever a listed process is running. Add python if your AI tool runs as Python." TextWrapping="Wrap" Foreground="#A3C0AF" FontSize="12" Margin="0,18,0,0"/>
+     <TextBlock Text="RESERVED PROCESSES · COMMA SEPARATED" Style="{StaticResource Label}"/><TextBox x:Name="ProcessesInput" AutomationProperties.Name="AI processes"/>
+     <TextBlock Text="CUSTOM POOL URL · ONLY USED WHEN CUSTOM POOL IS SELECTED" Style="{StaticResource Label}"/><TextBox x:Name="CustomUrlInput"/>
+     <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="Custom pool password / options" Style="{StaticResource Label}"/><TextBox x:Name="CustomPasswordInput"/></StackPanel><StackPanel Grid.Column="2"><TextBlock Text="Worker name · WoolyPooly" Style="{StaticResource Label}"/><TextBox x:Name="WorkerInput"/></StackPanel></Grid>
+     <Button Content="Save settings" HorizontalAlignment="Left" Style="{StaticResource Primary}" Click="SaveSettingsClick" Margin="0,22,0,0"/>
+    </StackPanel></Border>
+    <Border x:Name="ActivityPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel><TextBlock Text="The receipts." Style="{StaticResource Heading}"/><TextBlock Text="Live miner output · share counts reset when the mining worker restarts." Foreground="#ADC9B9" Margin="0,10,0,17"/><TextBox x:Name="LogBox" IsReadOnly="True" Height="330" TextWrapping="NoWrap" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="12" Text="No mining activity yet."/><WrapPanel Margin="0,16,0,0"><Button Content="Open local logs" Click="LogsClick" Margin="0,0,12,0"/><Button Content="Check AI status" Click="CheckAiClick"/></WrapPanel><TextBlock x:Name="AiCheckText" TextWrapping="Wrap" Foreground="#B0D5BF" Margin="0,14,0,0"/></StackPanel></Border>
+    <Border x:Name="HelpPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel><TextBlock Text="Read this. Then raise hell." Style="{StaticResource Heading}"/><TextBlock Text="1. Add your public VTC receiving address in Payout wallet.&#10;&#10;2. In Settings, prepare the miner and its data file. Choose a GPU and save.&#10;&#10;3. Pick a pool. Check its connection, then Start mining.&#10;&#10;4. Leave Auto on to let LM Studio and Bionic go first. Use reserved process names for other AI apps.&#10;&#10;5. View payouts opens the pool’s website. Coins are paid directly to your wallet once the pool’s threshold is reached." TextWrapping="Wrap" FontSize="16" Margin="0,20,0,20"/><TextBlock Text="Auto checks roughly once a second, with up to five seconds for a status query. Very short requests and initial model loading may occur between checks. An idle loaded model keeps its own VRAM; manually stop mining before loading a large model if necessary. Temperature monitoring depends on the driver. Closing the app stops its miner." TextWrapping="Wrap" Foreground="#ADC9B9"/><WrapPanel Margin="0,22,0,0"><Button Content="VerthashMiner source ↗" Click="MinerSourceClick" Margin="0,0,12,0"/><Button Content="Vertcoin resources ↗" Click="GetWalletClick"/></WrapPanel></StackPanel></Border>
+    <Border CornerRadius="13" Background="#271A2E" BorderBrush="#67435F" BorderThickness="1" Padding="17,13" Margin="0,20,0,0"><Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="FooterStatus" Text="✓  Set your payout address to get started." FontSize="13" Foreground="#B9D4C5" TextWrapping="Wrap" Margin="0,0,14,0"/><TextBlock Grid.Column="1" Text="Big walnut. Actual controls." FontFamily="Segoe UI" FontSize="13" Foreground="#9ABAAB" VerticalAlignment="Center"/></Grid></Border>
+   </StackPanel></ScrollViewer>
+  </Grid>
+
+  <Border Grid.Row="2" Background="#29172E" BorderBrush="#744A6D" BorderThickness="0,1,0,0" Padding="18,10"><Grid>
+   <Grid.ColumnDefinitions><ColumnDefinition Width="48"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+   <Image Source="{StaticResource MinerIcon}" Width="39" Height="39" VerticalAlignment="Top" Margin="0,5,9,0"/>
+   <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="8,0,20,0"><TextBlock x:Name="EmiCaption" Text="Emi: The walnut has left the trailer. You’re in control." TextWrapping="Wrap" FontSize="13" Foreground="#F6D0E7"/><StackPanel Orientation="Horizontal" Margin="0,9,0,0"><Button x:Name="DockPlayButton" Content="▶" Click="DockPlayClick" Padding="12,3" AutomationProperties.Name="Play or pause music"/><Button Content="♫" Click="JukeboxClick" Padding="12,3" Margin="7,0" AutomationProperties.Name="Open jukebox"/><TextBlock x:Name="NowPlaying" Text="Pick a song. Crack a smile." FontSize="12" VerticalAlignment="Center" Foreground="#CBB9CE" TextTrimming="CharacterEllipsis" MaxWidth="360"/></StackPanel></StackPanel>
+   <StackPanel Grid.Column="2" VerticalAlignment="Center"><WrapPanel><CheckBox x:Name="MusicMute" Content="Mute music" Checked="AudioChanged" Unchecked="AudioChanged" Margin="0,0,14,0" FontSize="12"/><CheckBox x:Name="EffectsMute" Content="Mute SFX" Checked="AudioChanged" Unchecked="AudioChanged" Margin="0,0,14,0" FontSize="12"/><CheckBox x:Name="VoiceMute" Content="Mute Emi" Checked="AudioChanged" Unchecked="AudioChanged" Margin="0" FontSize="12"/></WrapPanel><Button x:Name="MasterMuteButton" Content="Mute all" Click="MasterMuteClick" HorizontalAlignment="Right" Padding="18,5" Margin="0,9,0,0"/></StackPanel>
+  </Grid></Border>
+ </Grid></Border>
+</Window>
+
+
+

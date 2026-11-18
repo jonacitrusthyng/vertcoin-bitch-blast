@@ -1,0 +1,48 @@
+PASS: mainnet bech32 address
+PASS: checksum typo rejected
+PASS: mixed case rejected
+PASS: Bitcoin address rejected
+PASS: empty wallet rejected
+PASS: malformed endpoint rejected
+PASS: non-Stratum endpoint rejected
+PASS: endpoint credentials rejected
+PASS: valid custom endpoint
+PASS: GPU backend and index mapping
+PASS: auto waits before first start
+PASS: auto starts after idle interval
+PASS: AI work pauses mining
+PASS: idle timer resets after AI
+PASS: unavailable probe pauses mining
+PASS: manual mode bypasses AI
+PASS: manual mode still yields to another miner
+PASS: loaded idle model can share
+PASS: queued request reserves GPU
+PASS: embedding inference reserves GPU
+PASS: incomplete inference state fails closed
+PASS: remote inference excluded
+PASS: multi-device rates and share counts parsed without double counting
+PASS: unsupported temperature monitoring is surfaced
+PASS: owned process launches
+PASS: Windows command arguments round-trip without shell parsing
+PASS: stop waits for owned worker to exit
+PASS: owned worker can resume
+PASS: controller crash terminates mining child through Windows job ownership
+PASS: pool check parses a real socket response
+PASS: live mining directs payouts only to the user-supplied wallet
+PASS: controller consumes real worker log and reports live statistics
+PASS: controller stops actual worker when AI becomes busy
+PASS: manual stop while paused does not resume later
+PASS: media cannot escape the app folder
+PASS: absolute media paths rejected
+PASS: playlist skips missing recordings
+PASS: repeat wraps to the first available song
+PASS: repeat off stops at the playlist end
+PASS: shuffle avoids current and missing recordings
+PASS: empty playlist stops without looping
+PASS: effects and commentary mutes leave music independent
+PASS: music mute remains silent while ducking changes
+PASS: commentary ducks rather than stops music
+PASS: invalid saved volume values safely clamped
+PASS: independent audio preferences survive settings round-trip
+
+46 tests passed.
