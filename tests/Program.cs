@@ -21,6 +21,7 @@ if(args.Length>0 && args[0]=="--install") { Console.WriteLine(await MinerSetup.I
 if(args.Length>0 && args[0]=="--benchmark") { Console.WriteLine(await MinerSetup.BenchmarkAsync(args[1],args[2],new Gpu(args[3],int.Parse(args[4]),args[5]),75,75,CancellationToken.None));return; }
 if(args.Length>0 && args[0]=="--pools") { foreach(var p in Pool.Catalog.Where(p=>p.Id!="custom")){try{Console.WriteLine(p.Name+": "+await MinerSetup.CheckPoolAsync(p.Url,CancellationToken.None));}catch(Exception e){Console.WriteLine(p.Name+": FAILED "+e.Message);}}return; }
 
+if(args.Length>0 && args[0]=="--core-smoke") { await CoreSmoke.RunAsync(args[1],args.Length>2?args[2]:null);return; }
 int passed=0;
 void Check(bool value,string label) { if(!value)throw new Exception("FAIL: "+label); Console.WriteLine("PASS: "+label);passed++; }
 bool Throws(Action action) {try{action();return false;}catch{return true;}}
@@ -111,4 +112,6 @@ prefs.MusicMuted=false;Check(Math.Abs(prefs.EffectiveMusic(true)-.11)<.0001,"com
 Check(AudioPreferences.Level(double.NaN)==0 && AudioPreferences.Level(2)==1 && AudioPreferences.Level(-1)==0,"invalid saved volume values safely clamped");
 var restored=JsonSerializer.Deserialize<Settings>(JsonSerializer.Serialize(new Settings{Audio=prefs}))!;
 Check(restored.Audio.EffectsMuted && restored.Audio.VoiceMuted && restored.Audio.MusicVolume==.5,"independent audio preferences survive settings round-trip");
-Directory.Delete(scratch,true);Console.WriteLine($"\n{passed} tests passed.");
+await CoreTests.RunAsync(Check, scratch);
+Directory.Delete(scratch,true);
+Console.WriteLine($"\n{passed} tests passed.");

@@ -35,6 +35,7 @@ public record Gpu(string Backend, int Index, string Name)
 public class Settings
 {
     public AudioPreferences Audio { get; set; } = new();
+    public CoreNodeSettings Core { get; set; } = new();
     public string Address { get; set; } = "";
     public string PoolId { get; set; } = "woolypooly";
     public string CustomUrl { get; set; } = "";

@@ -48,6 +48,7 @@ public partial class MainWindow
         PlaybackClock.Text=$"{audio.Position:mm\\:ss} / {audio.Duration:mm\\:ss}";
         if(!seeking){seekUpdating=true;SeekBar.Maximum=Math.Max(1,audio.Duration.TotalSeconds);SeekBar.Value=audio.Position.TotalSeconds;seekUpdating=false;}
         SeekBar.IsEnabled=audio.Duration>TimeSpan.Zero;
+        UpdateGalleryAudio();
         MasterMuteButton.Content=settings.Audio.MusicMuted&&settings.Audio.EffectsMuted&&settings.Audio.VoiceMuted?"Unmute all":"Mute all";
     }
     private void AudioChanged(object sender,RoutedEventArgs e)

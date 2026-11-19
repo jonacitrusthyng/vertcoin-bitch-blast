@@ -7,16 +7,18 @@
   <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="210"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
    <Border BorderBrush="#583552" BorderThickness="0,0,1,0" Background="#201225"><Grid Margin="16,20,16,20">
     <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
-    <StackPanel><Image Source="{StaticResource MinerIcon}" Height="106" Width="106" Margin="0,10,0,8"/>
+    <StackPanel><Image Source="{StaticResource MinerIcon}" Height="80" Width="80" Margin="0,10,0,8"/>
      <TextBlock Text="Vertcoin" FontFamily="Segoe UI" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,6,0,0"/><TextBlock Text="BITCH BLAST! EDITION" FontSize="11" Foreground="#A9C5B6" HorizontalAlignment="Center" Margin="0,7,0,0"/>
-     <Border Background="#3B203C" BorderBrush="#825278" BorderThickness="1" CornerRadius="6" Padding="7,5" Margin="2,16,2,24"><TextBlock Text="EMI INSIDE. WALNUT OUTSIDE." FontSize="10" FontWeight="SemiBold" Foreground="#78E4AC" HorizontalAlignment="Center"/></Border>
-     <Button x:Name="DashboardNav" Content="◈   Blast deck" HorizontalContentAlignment="Left" Click="DashboardClick" Background="#653153" Margin="0,0,0,8"/>
-     <Button Content="▣   Nut fund" Click="WalletClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
-     <Button Content="⚙   Settings" Click="SettingsClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
-     <Button Content="♫   Emi’s jukebox" Click="JukeboxClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,8"/>
-     <Button Content="≋   The receipts" Click="ActivityClick" Background="Transparent" BorderThickness="0"/>
+     <Border Background="#3B203C" BorderBrush="#825278" BorderThickness="1" CornerRadius="6" Padding="7,5" Margin="2,10,2,14"><TextBlock Text="EMI INSIDE. WALNUT OUTSIDE." FontSize="10" FontWeight="SemiBold" Foreground="#78E4AC" HorizontalAlignment="Center"/></Border>
+     <Button Padding="12,7" FontSize="13" x:Name="DashboardNav" Content="◈   Blast deck" HorizontalContentAlignment="Left" Click="DashboardClick" Background="#653153" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="▣   Nut fund" Click="WalletClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="◉   Core node" Click="CoreClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="⚙   Settings" Click="SettingsClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="♫   Emi’s jukebox" Click="JukeboxClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="✧   Gallery HUD" Click="GalleryClick" Background="Transparent" BorderThickness="0" Margin="0,0,0,4"/>
+     <Button Padding="12,7" FontSize="13" Content="≋   The receipts" Click="ActivityClick" Background="Transparent" BorderThickness="0"/>
     </StackPanel>
-    <StackPanel Grid.Row="2"><Border Height="1" Background="#2C5141" Margin="0,0,0,16"/><Button Content="?   Getting started" Click="HelpClick" Background="Transparent" BorderThickness="0"/><TextBlock Text="v0.4.0 · COMMUNITY PREVIEW" FontSize="9" Foreground="#91B29F" HorizontalAlignment="Center" Margin="0,14,0,0"/></StackPanel>
+    <StackPanel Grid.Row="2"><Border Height="1" Background="#2C5141" Margin="0,0,0,16"/><Button Content="?   Getting started" Click="HelpClick" Background="Transparent" BorderThickness="0"/><TextBlock Text="v0.5.0 · COMMUNITY PREVIEW" FontSize="9" Foreground="#91B29F" HorizontalAlignment="Center" Margin="0,14,0,0"/></StackPanel>
    </Grid></Border>
    <ScrollViewer x:Name="MainScroll" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel Margin="28,22,28,20">
     <Border x:Name="HeroPanel" CornerRadius="18" BorderThickness="1" BorderBrush="#6D426B" Height="206" Margin="0,0,0,18" ClipToBounds="True">
@@ -61,7 +63,7 @@
      </StackPanel></Border>
     </Grid>
     <Border x:Name="JukeboxPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
-     <TextBlock Text="Emi’s walnut-powered jukebox." Style="{StaticResource Heading}" TextWrapping="Wrap"/>
+     <DockPanel><Button Content="✧  Open gallery HUD" DockPanel.Dock="Right" Click="GalleryClick" Margin="14,0,0,0"/><TextBlock Text="Emi’s walnut-powered jukebox." Style="{StaticResource Heading}" TextWrapping="Wrap"/></DockPanel>
      <TextBlock x:Name="AlbumStatus" Foreground="#D7BED5" Margin="0,8,0,16"/>
      <Grid><Grid.ColumnDefinitions><ColumnDefinition Width=".85*"/><ColumnDefinition Width="22"/><ColumnDefinition Width="1.25*"/></Grid.ColumnDefinitions>
       <StackPanel><Border CornerRadius="16" Background="#160F1B" Padding="6"><Image x:Name="CoverImage" Source="Assets/emi-host.png" Height="280" Stretch="Uniform" AutomationProperties.Name="Emi, the adult fictional jukebox host"/></Border>
@@ -86,11 +88,66 @@
      <Expander Header="Lyrics and credits" Foreground="#F7EAF3" Margin="0,20,0,0"><TextBox x:Name="TrackLyrics" IsReadOnly="True" TextWrapping="Wrap" Height="250" VerticalScrollBarVisibility="Auto" Margin="0,12,0,0"/></Expander>
      <TextBlock Text="Emi is Jona’s adult fictional fan interpretation, inspired by Katawa Shoujo / Four Leaf Studios. Music starts only when you press Play. Commentary captions remain visible when muted." TextWrapping="Wrap" Foreground="#C5ADC5" FontSize="12" Margin="0,18,0,0"/>
     </StackPanel></Border>
+    <Border x:Name="CorePanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
+     <TextBlock Text="Your node. Your corner of the network." Style="{StaticResource Heading}" TextWrapping="Wrap"/>
+     <TextBlock Text="Optional Vertcoin Core integration. Validate the blockchain, connect with peers, and keep your wallet in Core. Pool mining works independently." Foreground="#C5D5CF" TextWrapping="Wrap" Margin="0,10,0,18"/>
+     <Border Background="#122622" BorderBrush="#4D9E88" BorderThickness="1" CornerRadius="12" Padding="18"><StackPanel>
+      <TextBlock x:Name="CoreStatusText" Text="Core is not connected." FontSize="21" FontWeight="SemiBold" Foreground="#9BF0CB" TextWrapping="Wrap"/>
+      <ProgressBar x:Name="CoreSyncProgress" Minimum="0" Maximum="100" Value="0" Height="6" Margin="0,13,0,8" Foreground="#8FEBC1" Background="#223C34"/>
+      <TextBlock x:Name="CoreChainText" Text="Start your managed node or connect to an existing local Core instance." TextWrapping="Wrap" Foreground="#D1E4DC"/>
+      <Grid Margin="0,15,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+       <StackPanel><TextBlock Text="BLOCKS / HEADERS" FontSize="10" Foreground="#94BEB0"/><TextBlock x:Name="CoreBlocksText" Text="—" FontSize="19" Margin="0,5,8,0"/></StackPanel>
+       <StackPanel Grid.Column="1"><TextBlock Text="PEERS · IN / OUT" FontSize="10" Foreground="#94BEB0"/><TextBlock x:Name="CorePeersText" Text="—" FontSize="19" Margin="0,5,8,0"/></StackPanel>
+       <StackPanel Grid.Column="2"><TextBlock Text="BLOCK DATA ON DISK" FontSize="10" Foreground="#94BEB0"/><TextBlock x:Name="CoreDiskText" Text="—" FontSize="19" Margin="0,5,0,0"/></StackPanel>
+      </Grid>
+     </StackPanel></Border>
+     <WrapPanel Margin="0,16,0,0"><Button x:Name="CorePrepareButton" Content="1 · Prepare Core" Click="CorePrepareClick" Margin="0,0,10,10"/><Button x:Name="CoreStartButton" Content="2 · Start node" Style="{StaticResource Primary}" Click="CoreStartClick" Margin="0,0,10,10"/><Button x:Name="CoreConnectButton" Content="Connect / refresh" Click="CoreConnectClick" Margin="0,0,10,10"/><Button x:Name="CoreStopButton" Content="Stop managed node" Click="CoreStopClick" IsEnabled="False" Margin="0,0,10,10"/></WrapPanel>
+     <TextBlock x:Name="CoreActionText" Text="Prepare downloads the official Windows Core release and checks its SHA-256. Starting a node begins blockchain synchronization; it never starts mining." TextWrapping="Wrap" Foreground="#CDBACD" FontSize="12" Margin="0,0,0,14"/>
+     <Expander Header="Node settings" Foreground="#F6DBEE"><StackPanel Margin="0,12,0,10">
+      <TextBlock Text="CORE EXECUTABLE" Style="{StaticResource Label}"/><DockPanel><Button Content="Browse…" DockPanel.Dock="Right" Click="CoreBrowseClick" Margin="10,0,0,0"/><TextBox x:Name="CoreExeInput" AutomationProperties.Name="Vertcoin Core executable"/></DockPanel>
+      <TextBlock Text="CORE DATA FOLDER · WALLET AND BLOCKCHAIN STAY HERE" Style="{StaticResource Label}"/><DockPanel><Button Content="Choose folder…" DockPanel.Dock="Right" Click="CoreDataBrowseClick" Margin="10,0,0,0"/><TextBox x:Name="CoreDataInput" AutomationProperties.Name="Core data folder"/></DockPanel>
+      <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/></Grid.ColumnDefinitions>
+       <StackPanel><TextBlock Text="Block storage target · MiB" Style="{StaticResource Label}"/><TextBox x:Name="CorePruneInput" Text="2048" AutomationProperties.Name="Core pruning target"/></StackPanel>
+       <StackPanel Grid.Column="2"><TextBlock Text="Local RPC port" Style="{StaticResource Label}"/><TextBox x:Name="CoreRpcInput" Text="5888" AutomationProperties.Name="Local Core RPC port"/></StackPanel>
+       <StackPanel Grid.Column="4"><TextBlock Text="Peer TCP port" Style="{StaticResource Label}"/><TextBox x:Name="CorePeerInput" Text="5889" AutomationProperties.Name="Core peer port"/></StackPanel>
+      </Grid>
+      <TextBlock Text="2048 MiB limits retained block files, not total disk use or the initial download. Core also needs its own 1.28 GB Verthash file, chain state and wallets. Use 0 for archival storage. The node keeps Verthash on disk to leave RAM for your other apps." Foreground="#C5B4C8" FontSize="12" TextWrapping="Wrap" Margin="0,10,0,3"/>
+      <CheckBox x:Name="CoreListenToggle" Content="Accept incoming peers · optional router setup"/>
+      <CheckBox x:Name="CoreStopWithAppToggle" Content="Stop my managed node gracefully when Bitch Blast closes" IsChecked="True"/>
+      <TextBlock Text="For an existing node, choose its data folder and RPC port, then Connect. Core must have server=1 and cookie authentication enabled. Managed nodes use their own configuration; your existing vertcoin.conf is not edited." Foreground="#C5B4C8" FontSize="12" TextWrapping="Wrap" Margin="0,5,0,10"/>
+      <Button Content="Save node settings" Click="CoreSaveClick" HorizontalAlignment="Left"/>
+     </StackPanel></Expander>
+     <Border Height="1" Background="#63435F" Margin="0,19,0,18"/>
+     <TextBlock Text="Core wallet" FontSize="22" FontWeight="SemiBold"/>
+     <TextBlock Text="View a loaded wallet and create a receiving address here. Core handles keys, encryption, backups and sending coins. Balances need an up-to-date chain." Foreground="#CDBACD" FontSize="12" TextWrapping="Wrap" Margin="0,8,0,12"/>
+     <DockPanel><Button Content="Refresh wallets" DockPanel.Dock="Right" Click="CoreWalletRefreshClick" Margin="10,0,0,0"/><ComboBox x:Name="CoreWalletSelect" SelectionChanged="CoreWalletSelected" AutomationProperties.Name="Loaded Core wallet"/></DockPanel>
+     <TextBlock x:Name="CoreWalletText" Text="No Core wallet selected." TextWrapping="Wrap" Foreground="#A8E5C7" Margin="0,12,0,10"/>
+     <WrapPanel><Button Content="New receiving address" Click="CoreReceiveClick" Margin="0,0,10,10"/><Button Content="Open Core wallet window" Click="CoreOpenWalletClick" Margin="0,0,10,10"/></WrapPanel>
+     <TextBox x:Name="CoreReceiveAddress" IsReadOnly="True" AutomationProperties.Name="Core receiving address"/>
+     <WrapPanel Margin="0,10,0,0"><Button Content="Copy address" Click="CoreCopyAddressClick" Margin="0,0,10,10"/><Button Content="Use this address for mining" Click="CoreUseAddressClick" Margin="0,0,10,10"/></WrapPanel>
+     <Expander Header="Create an encrypted wallet in my managed node" Foreground="#F6DBEE" Margin="0,5,0,0"><StackPanel Margin="0,10,0,0">
+      <TextBlock Text="Choose a strong passphrase and save it somewhere safe. We cannot recover it. Before receiving coins, open Core’s wallet window and make a wallet backup. Passphrases are sent only to local Core and are not saved by Bitch Blast." TextWrapping="Wrap" Foreground="#CDBACD" FontSize="12"/>
+      <TextBlock Text="WALLET NAME" Style="{StaticResource Label}"/><TextBox x:Name="CoreWalletNameInput" Text="BitchBlast" MaxLength="64"/>
+      <TextBlock Text="PASSPHRASE · AT LEAST 12 CHARACTERS" Style="{StaticResource Label}"/><PasswordBox x:Name="CorePassphrase" Background="#170E1D" Foreground="#FFF5FC" BorderBrush="#75506C" Padding="10" FontSize="16" AutomationProperties.Name="New Core wallet passphrase"/>
+      <TextBlock Text="CONFIRM PASSPHRASE" Style="{StaticResource Label}"/><PasswordBox x:Name="CorePassphraseConfirm" Background="#170E1D" Foreground="#FFF5FC" BorderBrush="#75506C" Padding="10" FontSize="16" AutomationProperties.Name="Confirm Core wallet passphrase"/>
+      <Button Content="Create encrypted wallet" Click="CoreCreateWalletClick" HorizontalAlignment="Left" Margin="0,13,0,0"/>
+     </StackPanel></Expander>
+     <Border Height="1" Background="#63435F" Margin="0,20,0,18"/>
+     <Expander x:Name="RouterGuide" Header="Let other nodes connect · router guide" Foreground="#9BE9D6"><StackPanel Margin="0,12,0,0">
+      <TextBlock Text="Your node can sync and validate using outbound connections without port forwarding. Incoming peers help other nodes reach yours; this is optional and does not increase mining rewards." TextWrapping="Wrap" Margin="0,0,0,12"/>
+      <TextBlock x:Name="CoreNetworkHints" Text="Use Show local network to find this computer’s local addresses and router gateway." TextWrapping="Wrap" FontFamily="Consolas" FontSize="12" Foreground="#A8E5C7"/>
+      <Button Content="Show local network" Click="CoreNetworkHintsClick" HorizontalAlignment="Left" Margin="0,10,0,14"/>
+      <TextBlock Text="1. Reserve this computer’s LAN address in your router’s DHCP settings.&#10;&#10;2. Enable Accept incoming peers above, save, and restart the managed node.&#10;&#10;3. In your router’s Port forwarding / Virtual server section, forward TCP 5889 to this computer’s reserved LAN address, internal TCP 5889. Match your configured peer port if you changed it.&#10;&#10;4. If Windows asks, allow the chosen Core program on your trusted private network. Keep the firewall enabled.&#10;&#10;5. Check the In count after the node has been online. An inbound peer confirms a connection arrived. Zero inbound peers alone does not prove the port is blocked." TextWrapping="Wrap" Foreground="#D3DCD7"/>
+      <TextBlock Text="Never forward RPC 5888 or put the computer in a DMZ. RPC stays on 127.0.0.1. With carrier-grade NAT, ordinary forwarding cannot open an inbound IPv4 path; ask your ISP about a public address. Double NAT may require a rule on both routers. Native IPv6 uses firewall permissions rather than IPv4 port forwarding." TextWrapping="Wrap" Foreground="#F2C8DD" Margin="0,14,0,12"/>
+      <Button Content="Full node guide and official sources ↗" Click="CoreGuideClick" HorizontalAlignment="Left"/>
+     </StackPanel></Expander>
+     <Button Content="Official Vertcoin Core release ↗" Click="CoreReleaseClick" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+    </StackPanel></Border>
     <Border x:Name="WalletPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>
      <TextBlock Text="Where the nuts land." Style="{StaticResource Heading}"/><TextBlock Text="Paste a Vertcoin receiving address from your wallet. Pool payouts will go to this address." TextWrapping="Wrap" Foreground="#ADC9B9" Margin="0,12,0,4"/>
      <TextBlock Text="PUBLIC VTC RECEIVING ADDRESS" Style="{StaticResource Label}"/><TextBox x:Name="AddressInput" AutomationProperties.Name="Vertcoin payout address" MaxLength="90"/>
      <TextBlock Text="Use a Vertcoin mainnet address, usually starting with V or vtc1. Never enter a recovery phrase or private key." Foreground="#A3C0AF" TextWrapping="Wrap" FontSize="12" Margin="0,10,0,0"/>
-     <WrapPanel Margin="0,22,0,0"><Button Content="Save payout address" Style="{StaticResource Primary}" Click="SaveWalletClick" Margin="0,0,12,12"/><Button Content="I need a wallet ↗" Click="GetWalletClick" Margin="0,0,12,12"/><Button Content="Open my wallet" Click="OpenWalletClick" Margin="0,0,0,12"/></WrapPanel>
+     <WrapPanel Margin="0,22,0,0"><Button Content="Save payout address" Style="{StaticResource Primary}" Click="SaveWalletClick" Margin="0,0,12,12"/><Button Content="Set up a Core wallet" Click="CoreClick" Margin="0,0,12,12"/><Button Content="Open my wallet" Click="OpenWalletClick" Margin="0,0,0,12"/></WrapPanel>
      <Border Height="1" Background="#2C5141" Margin="0,12,0,20"/><TextBlock Text="Your keys stay in your wallet." FontSize="20" FontFamily="Segoe UI"/><TextBlock Text="This app is a mining front end. Your wallet handles balances, receiving and sending coins. Pool earnings and pending payouts are available through View payouts. Changing this address does not move an existing pool balance." TextWrapping="Wrap" Foreground="#ADC9B9" Margin="0,10,0,0"/>
     </StackPanel></Border>
     <Border x:Name="SettingsPanel" Visibility="Collapsed" Style="{StaticResource Card}"><StackPanel>

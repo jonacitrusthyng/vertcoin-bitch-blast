@@ -24,6 +24,7 @@ public partial class MainWindow : Window
         controller.Changed += status => { if(Dispatcher.CheckAccess()) UpdateStatus(status); else Dispatcher.BeginInvoke(() => UpdateStatus(status)); };
         ready = true;
         InitializeAudio();
+        InitializeCore();
         Loaded += async (_,_) => { Comment("welcome","Welcome to Bitch Blast. The walnut has left the trailer.",true); if(File.Exists(settings.MinerPath)) await Safe(async()=>await ScanGpu()); };
     }
     private void FillSettings()
@@ -48,7 +49,7 @@ public partial class MainWindow : Window
     }
     private void ShowPanel(FrameworkElement panel)
     {
-        foreach(var p in new FrameworkElement[]{Dashboard,WalletPanel,SettingsPanel,ActivityPanel,HelpPanel,JukeboxPanel}) p.Visibility=p==panel ? Visibility.Visible:Visibility.Collapsed;
+        foreach(var p in new FrameworkElement[]{Dashboard,WalletPanel,SettingsPanel,ActivityPanel,HelpPanel,JukeboxPanel,CorePanel}) p.Visibility=p==panel ? Visibility.Visible:Visibility.Collapsed;
         HeroPanel.Visibility=panel==Dashboard?Visibility.Visible:Visibility.Collapsed; MainScroll.ScrollToTop();
     }
     private void DashboardClick(object s,RoutedEventArgs e)=>ShowPanel(Dashboard);
@@ -86,6 +87,7 @@ public partial class MainWindow : Window
     {
         if(closed) return;
         OnMiningAudio(s);
+        latestMiningStatus=s;UpdateGalleryHud();
         StatusBadge.Text=(s.Active ? "●  " : "○  ")+s.State;
         MiningDetail.Text=s.Detail; HashrateText.Text=s.Hashrate>0 ? $"{s.Hashrate:N2} kH/s" : "— kH/s";
         SharesText.Text=$"{s.Accepted} accepted"; RejectedText.Text=s.Total>0 ? $"{s.Total-s.Accepted} rejected · {s.Total} submitted" : "No shares submitted yet";
@@ -198,11 +200,14 @@ public partial class MainWindow : Window
     private async void OnClosing(object? sender,CancelEventArgs e)
     {
         if(closed)return;e.Cancel=true;if(closing)return;closing=true;
+        gallery?.Close(); coreTimer.Stop();
         audioTimer.Stop(); audio?.Dispose(); SaveAudio();
         lifetime.Cancel();setup?.Cancel();
         // Defer completion until the original Closing event has returned, even when idle.
         await System.Windows.Threading.Dispatcher.Yield();
-        await controller.DisposeAsync();closed=true;lifetime.Dispose();Close();
+        await controller.DisposeAsync();
+        await CloseCoreAsync();
+        closed=true;lifetime.Dispose();Close();
     }
 }
 

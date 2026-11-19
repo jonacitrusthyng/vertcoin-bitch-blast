@@ -8,7 +8,7 @@ if (-not $ArchivePath) {
     $missing = @($catalog | Where-Object { -not (Test-Path -LiteralPath (Join-Path $destination $_.File)) -or -not (Test-Path -LiteralPath (Join-Path $destination $_.Cover)) })
     if ($missing.Count -eq 0) { Write-Host 'All music and covers are already installed.'; return }
     $ArchivePath = Join-Path $projectRoot 'music-pack.download.zip'
-    Invoke-WebRequest -Uri 'https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/download/v0.4.0/Vertcoin-Bitch-Blast-v0.4.0-Music-Pack.zip' -OutFile $ArchivePath
+    Invoke-WebRequest -Uri 'https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/download/v0.5.0/Vertcoin-Bitch-Blast-v0.5.0-Music-Pack.zip' -OutFile $ArchivePath
 }
 if ((Get-FileHash -LiteralPath $ArchivePath -Algorithm SHA256).Hash -ne $expected) { throw 'Music pack checksum mismatch. No files were extracted.' }
 Add-Type -AssemblyName System.IO.Compression.FileSystem

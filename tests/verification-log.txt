@@ -44,5 +44,32 @@ PASS: music mute remains silent while ducking changes
 PASS: commentary ducks rather than stops music
 PASS: invalid saved volume values safely clamped
 PASS: independent audio preferences survive settings round-trip
+PASS: Core defaults to outbound peers, bounded block storage and graceful stop
+PASS: Core RPC rejects remote endpoints and URL credentials
+PASS: Core RPC accepts only a literal loopback endpoint
+PASS: Core rejects conflicting ports and undersized prune targets
+PASS: Core wallet names cannot traverse paths
+PASS: Managed Core isolates config, cookie authentication and loopback RPC
+PASS: Core regtest cannot contact or accept network peers
+PASS: Core status reads real RPC fields without inventing synchronization progress
+PASS: Core cookie authentication stays on loopback
+PASS: Core wallet balances preserve decimal precision and encode the wallet route
+PASS: Core receiving address uses only the receive RPC
+PASS: Existing unnamed Core wallets use the explicit empty wallet route
+PASS: Core wallet creation requests encryption and descriptor keys
+PASS: Core refuses an empty or short wallet encryption passphrase
+PASS: New Core wallets still require a named wallet
+PASS: Core integration never invokes send, unlock or private-key export
+PASS: Core RPC redirects are rejected before credentials can be forwarded
+PASS: Malformed Core authentication files are rejected
+PASS: A left-running managed node can be read after an app restart
+PASS: Managed cookie lookup cannot escape the node data folder
+PASS: Unowned Core processes cannot be stopped or have wallets created by the manager
+PASS: Managed Core preserves an existing unnamed wallet directory convention
+PASS: Core receiving address remains bound to the same wallet and node
+PASS: Changing the selected wallet invalidates its previously displayed receiving address
+PASS: Changing the Core data folder invalidates a previous receiving address
+PASS: Changing the Core RPC port invalidates a previous receiving address
+PASS: Changing the Core network invalidates a previous receiving address
 
-46 tests passed.
+73 tests passed.

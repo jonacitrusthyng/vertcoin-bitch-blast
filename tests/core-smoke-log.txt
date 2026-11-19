@@ -1,0 +1,7 @@
+Isolated Core regtest data: temporary test directory (local path omitted)
+PASS: official Core starts with isolated regtest, zero peers and authenticated local RPC
+PASS: official Core creates a locked encrypted descriptor wallet with zero funds
+PASS: locked Core wallet produces a receiving address without unlock or spending
+PASS: a second manager reads but does not stop the unowned node
+PASS: official Core flushes and exits through authenticated RPC stop
+PASS: the same encrypted wallet reloads locked after a managed Core restart
