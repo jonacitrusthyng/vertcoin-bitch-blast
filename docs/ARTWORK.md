@@ -8,4 +8,8 @@ The edition's logo is the supplied Emi patch, with only the exterior white backg
 
 Edit target: the supplied circular embroidered Emi patch. Remove only the plain white background outside the circular patch, producing a clean transparent PNG cutout. Preserve the complete embroidery, circular border, EMI lettering, lemon motif, green eyes, character, clothing and prostheses exactly. Keep the full round patch with a small transparent margin. Do not redraw, add objects, alter colors, crop the patch, or add new text. This is the app logo.
 
+## GitHub page illustration
+
+`docs/emi-trailer-walnut.png` is AI-generated fan artwork created with the built-in image-generation tool using the user's approved references. It appears on the GitHub README and is not bundled into the application.
+
 Emi is Jona's adult fictional fan interpretation inspired by Katawa Shoujo / Four Leaf Studios. No endorsement by those creators or the Vertcoin project is implied. See MEDIA-CREDITS.md.

@@ -2,7 +2,7 @@
 
 **Big walnut energy.** A free Windows x64 front end for VerthashMiner, with automatic GPU sharing for local AI, optional Vertcoin Core node and wallet integration, a full-screen gallery with live stats, and a fully offline Emi jukebox. Independent community preview **v0.5.0**; not an official Vertcoin-project release.
 
-[**Download for Windows x64**](https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/download/v0.5.0/Vertcoin-Bitch-Blast-v0.5.0-Windows-x64.zip) · [Release, full source and SHA-256 checksums](https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/tag/v0.5.0)
+[**Download for Windows x64**](https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/download/v0.5.0/Vertcoin-Bitch-Blast-v0.5.0-Windows-x64.zip) � [Release, full source and SHA-256 checksums](https://github.com/jonacitrusthyng/vertcoin-bitch-blast/releases/tag/v0.5.0)
 
 The download is unsigned. [73 automated checks and six isolated Core checks passed](TEST-RESULTS.md). Live pool share acceptance, completed payouts and a full mainnet node sync still need field testing.
 
@@ -36,13 +36,17 @@ The default managed node has its own `%LOCALAPPDATA%\VertcoinBitchBlast\Core` da
 
 ![Emi jukebox, introduced in v0.4.0](docs/Jukebox-Preview.png)
 
+![Emi fan artwork with the walnut-and-trailer theme](docs/emi-trailer-walnut.png)
+
+*AI-generated fan artwork featuring our adult Emi interpretation. [Artwork credits](docs/ARTWORK.md).*
+
 ## Start here
 
 1. Extract the Windows ZIP and open **VertcoinBitchBlast.exe**. The .NET runtime is included; no administrator privileges are needed.
 2. Choose **Nut fund**, paste your public **Vertcoin mainnet receiving address**, and save. The app checks the address checksum. You can also create an encrypted wallet through the optional Core panel and explicitly use its receiving address for mining. Back up that wallet in the official Core GUI before funding it. **Set up a Core wallet** opens the integrated Core panel.
 3. In **Settings**, click **Prepare miner + data**. This downloads VerthashMiner 0.7.2 from its official GitHub release, checks a pinned SHA-256, and generates the canonical 1,283,457,024-byte Verthash file locally. Allow several minutes and at least 1.4 GB of free disk space. Setup can be cancelled. You can instead browse to an existing miner and data file.
-4. **Scan GPUs**, choose the GPU to mine with, and save settings. **Test GPU offline** checks hashing for up to 35 seconds without a wallet or pool connection. The default intensity is 75% and the temperature limit is 75°C. Monitoring support depends on the device and driver. This release selects one GPU per mining session.
-5. On **Blast deck**, select **WoolyPooly**, **Zpool**, **Suprnova**, or **Custom pool**. **Check pool** tests the Stratum subscription. Click **Blast off · start mining**. In Auto mode, the app waits for 30 seconds of continuous AI idle time first.
+4. **Scan GPUs**, choose the GPU to mine with, and save settings. **Test GPU offline** checks hashing for up to 35 seconds without a wallet or pool connection. The default intensity is 75% and the temperature limit is 75�C. Monitoring support depends on the device and driver. This release selects one GPU per mining session.
+5. On **Blast deck**, select **WoolyPooly**, **Zpool**, **Suprnova**, or **Custom pool**. **Check pool** tests the Stratum subscription. Click **Blast off � start mining**. In Auto mode, the app waits for 30 seconds of continuous AI idle time first.
 6. **Stop mining** releases the worker. Closing the app also stops its worker, including if the app crashes. The app never enables mining automatically on launch.
 
 ## Upgrading from an earlier community preview
